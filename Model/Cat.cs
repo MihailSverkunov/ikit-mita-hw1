@@ -8,14 +8,29 @@ namespace Model
 {
     public class Cat
     {
-        private int age;
+        
         public Cat(int a)
         {
-            age = a;
+            Age = a;
         }
 
+        public int Age { get; }
 
-        public string Name;
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (String.IsNullOrEmpty(_name))
+                {
+                    _name = value;
+                }
+            }
+        }
         
 
         private int health;
