@@ -22,12 +22,12 @@ namespace Model
 
         public void Feed()
         {
-            if (health++ < 10) health++;
+            if (health + 1 < 10) health++;
         }
 
         public void Punish()
         {
-            if (health-- > 0) health--;
+            if (health - 1 > 0) health--;
         }
 
         public string Color
